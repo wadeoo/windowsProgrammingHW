@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "ADO.h"
 #include<iostream>
 #include<vector>

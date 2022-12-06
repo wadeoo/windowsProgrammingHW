@@ -2,7 +2,7 @@
 #ifndef ADO_H
 #define ADO_H
 
-#import "C:\Program Files\Common Files\System\ado\msado15.dll" no_namespace rename("EOF", "adoEOF")
+#import "C:\\Program Files\\Common Files\\System\\ado\\msado15.dll" no_namespace rename("EOF", "adoEOF")
 
 //数据库类型
 enum dbType_enum{
