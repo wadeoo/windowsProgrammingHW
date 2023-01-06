@@ -1,0 +1,25 @@
+﻿生成启动时间为 2023/1/6 20:33:31。
+     1>项目“D:\BASIC\Desktop\112000840吴炜达\平时实验\DLL实验\code\ComputerDLL\ComputerDLL\ComputerDLL.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D COMPUTERDLL_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Computer.cpp Cpu.cpp lib.cpp MainBoard.cpp Ram.cpp
+         Ram.cpp
+         MainBoard.cpp
+         lib.cpp
+         Cpu.cpp
+         Computer.cpp
+     1>d:\basic\desktop\112000840吴炜达\平时实验\dll实验\code\computerdll\computerdll\computer.h(17): warning C4251: “Computer::computerModel”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“Computer”的客户端使用
+     1>d:\basic\desktop\112000840吴炜达\平时实验\dll实验\code\computerdll\computerdll\computer.h(22): warning C4251: “Computer::computerBrand”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“Computer”的客户端使用
+         正在生成代码...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\BASIC\Desktop\112000840吴炜达\平时实验\DLL实验\code\ComputerDLL\Debug\ComputerDLL.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:"lib.def" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\BASIC\Desktop\112000840吴炜达\平时实验\DLL实验\code\ComputerDLL\Debug\ComputerDLL.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\BASIC\Desktop\112000840吴炜达\平时实验\DLL实验\code\ComputerDLL\Debug\ComputerDLL.lib" /MACHINE:X86 /DLL Debug\Computer.obj
+         Debug\Cpu.obj
+         Debug\lib.obj
+         Debug\MainBoard.obj
+         Debug\Ram.obj
+            正在创建库 D:\BASIC\Desktop\112000840吴炜达\平时实验\DLL实验\code\ComputerDLL\Debug\ComputerDLL.lib 和对象 D:\BASIC\Desktop\112000840吴炜达\平时实验\DLL实验\code\ComputerDLL\Debug\ComputerDLL.exp
+         ComputerDLL.vcxproj -> D:\BASIC\Desktop\112000840吴炜达\平时实验\DLL实验\code\ComputerDLL\Debug\ComputerDLL.dll
+     1>已完成生成项目“D:\BASIC\Desktop\112000840吴炜达\平时实验\DLL实验\code\ComputerDLL\ComputerDLL\ComputerDLL.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.72
