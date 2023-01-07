@@ -18,6 +18,7 @@ void searchHandle();
 void managementHandle();
 void managementMenuHandle();
 void managementEmployeeHandle();
+void start();
 
 
 ADO ado(3);//选择 access
@@ -34,32 +35,9 @@ void mainHandling(){
 
 
 	int result = ado.InitConn("", "", "rms.mdb");
-	cout << (result ? "yes" : "no") << endl;
+	//cout << (result ? "成功连接数据库" : "数据库连接失败") << endl;
 
-
-	//
-	char choice;
-
-	cout << endl;
-	cout << "*****************************************************************" << endl;
-	cout << "*****************************************************************" << endl;
-	cout << "*****************************************************************" << endl;
-	cout << "**************************光华餐厅管理系统***********************" << endl;
-	cout << "*****************************************************************" << endl;
-	cout << "*****************************************************************" << endl;
-	cout << "*****************************************************************" << endl;
-
-	cout << "请选择操作类型： 查阅（S) 管理（M）按Q键随时退出" << endl;
-	cin >> choice;
-
-	if (choice == 's' || choice == 'S'){
-		searchHandle();
-	}
-	else if (choice == 'm' || choice == 'M'){
-		managementHandle();
-	}
-
-
+	start();
 
 
 	system("pause");
@@ -69,21 +47,34 @@ void mainHandling(){
 //负责查询
 void searchHandle(){
 	char choice;
+		system("cls");
 	cout << "请选择查询对象：菜单（A）员工（B）" << endl;
 	cin >> choice;
 	if (choice == 'a' || choice == 'A'){
+		cout << endl<< "菜单完整列表:" << endl;
 		mAction.showMenu();
+		cout << endl;
 		char foodName[50];
 		cout << "请输入要查询的菜品的名称：";
 		cin >> foodName;
+		system("cls");
+		cout << "查询结果:";
 		mAction.searchFood(foodName);
+		cout << endl;
+		start();
 	}
 	else if (choice == 'b' || choice == 'B'){
+		cout << endl<< "员工完整列表:" << endl;
 		eAction.showAllEmployee();
+		cout << endl;
 		char name[50];
 		cout << "请输入要查询的员工的姓名：";
 		cin >> name;
+		system("cls");
+		cout << "查询结果:";
 		eAction.searchEmployee(name);
+		cout << endl;
+		start();
 	}
 }
 
@@ -126,6 +117,7 @@ void managementMenuHandle(){
 		mAction.addFood(foodName, foodPrice);
 		//展示菜单表
 		mAction.showMenu();
+		start();
 	}
 	else if (choice == 'b' || choice == 'B'){
 		char id[10];
@@ -134,6 +126,7 @@ void managementMenuHandle(){
 		mAction.deleteFood(id);
 		//展示菜单表
 		mAction.showMenu();
+		start();
 	}
 	else if (choice == 'c' || choice == 'C'){
 		char id[10];
@@ -149,6 +142,7 @@ void managementMenuHandle(){
 		mAction.updateFood(id,foodName,foodPrice);
 		//展示菜单表
 		mAction.showMenu();
+		start();
 	}
 }
 
@@ -174,6 +168,7 @@ void managementEmployeeHandle(){
 		eAction.addEmployee(name, role);
 		//展示员工表
 		eAction.showAllEmployee();;
+		start();
 	}
 	else if (choice == 'b' || choice == 'B'){
 		char id[10];
@@ -182,6 +177,7 @@ void managementEmployeeHandle(){
 		eAction.deleteEmployee(id);
 		//展示员工表
 		eAction.showAllEmployee();
+		start();
 	}
 	else if (choice == 'c' || choice == 'C'){
 		char id[10];
@@ -197,5 +193,28 @@ void managementEmployeeHandle(){
 		eAction.updateEmployee(id, name, role);
 		//展示员工表
 		eAction.showAllEmployee();
+		start();
+	}
+}
+
+void start(){
+	char choice;
+
+	cout << "*****************************************************************" << endl;
+	cout << "*****************************************************************" << endl;
+	cout << "*****************************************************************" << endl;
+	cout << "*************************光华餐厅管理系统***********************" << endl;
+	cout << "*****************************************************************" << endl;
+	cout << "*****************************************************************" << endl;
+	cout << "*****************************************************************" << endl;
+
+	cout << "请选择操作类型： 查阅（S) 管理（M）按Q键随时退出" << endl;
+	cin >> choice;
+
+	if (choice == 's' || choice == 'S'){
+		searchHandle();
+	}
+	else if (choice == 'm' || choice == 'M'){
+		managementHandle();
 	}
 }

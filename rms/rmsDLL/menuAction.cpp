@@ -27,7 +27,7 @@ void menuAction::searchFood(char* foodName){
 	strcat(condition, foodName);
 	strcat(condition, "'");;
 	ado.Query("menu", condition);
-	ado.ShowCurrentRS(true);
+		ado.ShowCurrentRS(true);
 }
 
 

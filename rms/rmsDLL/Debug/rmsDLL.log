@@ -1,4 +1,4 @@
-﻿生成启动时间为 2023/1/7 19:29:13。
+﻿生成启动时间为 2023/1/7 20:09:39。
      1>项目“D:\BASIC\Desktop\windowsProgrammingHW\rms\rmsDLL\rmsDLL.vcxproj”在节点 2 上(Rebuild 个目标)。
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D RMSDLL_EXPORTS /D _CRT_SECURE_NO_WARNINGS /D _WINDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Ado.cpp Employee.cpp EmployeeAction.cpp lib.cpp Menu.cpp menuAction.cpp
@@ -45,4 +45,4 @@
 
 生成成功。
 
-已用时间 00:00:03.37
+已用时间 00:00:03.24

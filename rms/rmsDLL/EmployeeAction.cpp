@@ -26,7 +26,7 @@ void  EmployeeAction::searchEmployee(char* name){
 	strcat(condition, name);
 	strcat(condition, "'");;
 	ado.Query("employee", condition);
-	ado.ShowCurrentRS(true);
+		ado.ShowCurrentRS(true);
 }
 
 void EmployeeAction::addEmployee(char* name, char* role){
