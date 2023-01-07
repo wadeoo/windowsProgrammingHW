@@ -60,7 +60,6 @@ void searchHandle(){
 		system("cls");
 		cout << "查询结果:";
 		mAction.searchFood(foodName);
-		cout << endl;
 		start();
 	}
 	else if (choice == 'b' || choice == 'B'){
@@ -73,22 +72,22 @@ void searchHandle(){
 		system("cls");
 		cout << "查询结果:";
 		eAction.searchEmployee(name);
-		cout << endl;
 		start();
 	}
 }
 
 //负责管理
 void managementHandle(){
-	//system("cls");
-	//
+	system("cls");
 	char choice;
 	cout << "请选择管理对象：菜单（A）员工（B）" << endl;
 	cin >> choice;
 	if (choice == 'a' || choice == 'A'){
+		system("cls");
 		managementMenuHandle();
 	}
 	else if (choice == 'b' || choice == 'B'){
+		system("cls");
 		managementEmployeeHandle();
 	}
 
@@ -99,10 +98,11 @@ void managementMenuHandle(){
 	
 	char choice;
 
-	cout << "*******菜单管理*******" << endl;
-
+	cout << "*****************************菜单管理****************************" << endl<<endl;
 	//展示菜单表
+	cout << "完整菜单列表:" << endl;
 	mAction.showMenu();;
+	cout << endl;
 
 	cout << "请选择具体操作类型： 增加（A）删除（B）修改（C）"<< endl;
 	cin >> choice;
@@ -115,7 +115,10 @@ void managementMenuHandle(){
 		cout << "请输入新菜品价格：";
 		cin >> foodPrice;
 		mAction.addFood(foodName, foodPrice);
+
+		system("cls");
 		//展示菜单表
+		cout << "添加后完整菜单列表:" << endl;
 		mAction.showMenu();
 		start();
 	}
@@ -124,7 +127,9 @@ void managementMenuHandle(){
 		cout << "请输入要删除的菜品的id:";
 		cin >> id;
 		mAction.deleteFood(id);
+		system("cls");
 		//展示菜单表
+		cout << "删除后完整菜单列表:" << endl;
 		mAction.showMenu();
 		start();
 	}
@@ -140,7 +145,9 @@ void managementMenuHandle(){
 		cin >> foodPrice;
 
 		mAction.updateFood(id,foodName,foodPrice);
+		system("cls");
 		//展示菜单表
+		cout << "修改后完整菜单列表:" << endl; 
 		mAction.showMenu();
 		start();
 	}
@@ -150,10 +157,11 @@ void managementMenuHandle(){
 void managementEmployeeHandle(){
 	char choice;
 
-	cout << "*******员工管理*******" << endl;
+	cout << "*****************************员工管理****************************" << endl<<endl;
 
 	//展示员工表
 	eAction.showAllEmployee();
+	cout << endl;
 
 	cout << "请选择具体操作类型： 增加（A）删除（B）修改（C）" << endl;
 	cin >> choice;
@@ -166,6 +174,8 @@ void managementEmployeeHandle(){
 		cout << "请输入新员工职位：";
 		cin >> role;
 		eAction.addEmployee(name, role);
+		system("cls");
+		cout << "添加后完整员工表" << endl;
 		//展示员工表
 		eAction.showAllEmployee();;
 		start();
@@ -175,6 +185,8 @@ void managementEmployeeHandle(){
 		cout << "请输入要删除的员工的id:";
 		cin >> id;
 		eAction.deleteEmployee(id);
+		system("cls");
+		cout << "删除后完整员工表" << endl;
 		//展示员工表
 		eAction.showAllEmployee();
 		start();
@@ -191,6 +203,8 @@ void managementEmployeeHandle(){
 		cin >> role;
 
 		eAction.updateEmployee(id, name, role);
+		system("cls");
+		cout << "修改后完整员工表" << endl;
 		//展示员工表
 		eAction.showAllEmployee();
 		start();
@@ -200,13 +214,16 @@ void managementEmployeeHandle(){
 void start(){
 	char choice;
 
+	cout << endl;
+	cout << "----------------------------- 分割线 ----------------------------"<<endl;
+	cout << endl;
 	cout << "*****************************************************************" << endl;
 	cout << "*****************************************************************" << endl;
 	cout << "*****************************************************************" << endl;
-	cout << "*************************光华餐厅管理系统***********************" << endl;
+	cout << "*************************光华餐厅管理系统************************" << endl;
 	cout << "*****************************************************************" << endl;
 	cout << "*****************************************************************" << endl;
-	cout << "*****************************************************************" << endl;
+	cout << "*****************************************************************" << endl<<endl<<endl<<endl;
 
 	cout << "请选择操作类型： 查阅（S) 管理（M）按Q键随时退出" << endl;
 	cin >> choice;
