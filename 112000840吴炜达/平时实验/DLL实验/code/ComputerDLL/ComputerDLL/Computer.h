@@ -36,6 +36,5 @@ public:
 
 
 
-#define COMPUTER
 #endif // !COMPUTER
 

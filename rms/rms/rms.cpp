@@ -4,6 +4,10 @@
 #include<iostream>
 #pragma comment(lib, "..\\Debug\\rmsDLL.lib")
 #include "..\rmsDLL\Ado.h"¡¡
+#include "..\rmsDLL\Menu.h"¡¡
+#include "..\rmsDLL\Employee.h"¡¡
+
+
 using namespace std;
 
 
