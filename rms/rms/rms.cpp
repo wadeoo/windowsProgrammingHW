@@ -1,18 +1,25 @@
 // rms.cpp : 定义控制台应用程序的入口点。
 //
 
-#include "stdafx.h"
-#include "ADO.h"
+#include<iostream>
+#pragma comment(lib, "..\\Debug\\rmsDLL.lib")
+#include "..\rmsDLL\Ado.h"　
+using namespace std;
 
-ADO ado;
+
+void mainHandling();
+
+
+ADO ado(3);
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	
+	mainHandling();
 	return 0;
 }
 
 void mainHandling(){
-
+	int result = ado.InitConn("", "", "rms.mdb");
+	cout << (result ? "yes" : "no") << endl;
 }
 
