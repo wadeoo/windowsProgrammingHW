@@ -85,12 +85,27 @@ void managementHandle(){
 
 //负责菜单管理
 void managementMenuHandle(){
+	//
 	char choice;
 	cout << "*******菜单管理*******" << endl;
+
+	//展示菜单表
+	ado.GetTableInfo("menu");
+	ado.ShowCurrentRS(true);
+
 	cout << "请选择具体操作类型： 增加（A）删除（B）修改（C）"<< endl;
 	cin >> choice;
+
+	//
 	if (choice == 'a' || choice == 'A'){
-		managementMenuHandle();
+		char* foodName, foodPrice;
+		cout << "请输入新菜品名称：";
+		cin >> foodName;
+		cout << "请输入新菜品价格：";
+		cin >> foodPrice;
+
+		
+
 	}
 	else if (choice == 'b' || choice == 'B'){
 		managementEmployeeHandle();
