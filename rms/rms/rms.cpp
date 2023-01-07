@@ -2,6 +2,9 @@
 //
 
 #include<iostream>
+#include <windows.h>
+#include <process.h>
+#include <conio.h>
 #pragma comment(lib, "..\\Debug\\rmsDLL.lib")
 #include "..\rmsDLL\Ado.h"　
 #include "..\rmsDLL\Menu.h"　
@@ -19,15 +22,23 @@ void managementHandle();
 void managementMenuHandle();
 void managementEmployeeHandle();
 void start();
+void threadHandle();
 
 
 ADO ado(3);//选择 access
 menuAction mAction;
 EmployeeAction eAction;
 
+UINT uId1, uId2;
+
+UINT __stdcall ThreadProc(LPVOID);
+UINT __stdcall ThreadProc2(LPVOID);
+
+
+
 int _tmain(int argc, _TCHAR* argv[])
 {
-	mainHandling();
+	threadHandle();
 	return 0;
 }
 
@@ -40,18 +51,17 @@ void mainHandling(){
 	start();
 
 
-	system("pause");
 }
 
 
 //负责查询
 void searchHandle(){
 	char choice;
-		system("cls");
+	system("cls");
 	cout << "请选择查询对象：菜单（A）员工（B）" << endl;
 	cin >> choice;
 	if (choice == 'a' || choice == 'A'){
-		cout << endl<< "菜单完整列表:" << endl;
+		cout << endl << "菜单完整列表:" << endl;
 		mAction.showMenu();
 		cout << endl;
 		char foodName[50];
@@ -63,7 +73,7 @@ void searchHandle(){
 		start();
 	}
 	else if (choice == 'b' || choice == 'B'){
-		cout << endl<< "员工完整列表:" << endl;
+		cout << endl << "员工完整列表:" << endl;
 		eAction.showAllEmployee();
 		cout << endl;
 		char name[50];
@@ -95,19 +105,19 @@ void managementHandle(){
 
 //负责菜单管理
 void managementMenuHandle(){
-	
+
 	char choice;
 
-	cout << "*****************************菜单管理****************************" << endl<<endl;
+	cout << "*****************************菜单管理****************************" << endl << endl;
 	//展示菜单表
 	cout << "完整菜单列表:" << endl;
 	mAction.showMenu();;
 	cout << endl;
 
-	cout << "请选择具体操作类型： 增加（A）删除（B）修改（C）"<< endl;
+	cout << "请选择具体操作类型： 增加（A）删除（B）修改（C）" << endl;
 	cin >> choice;
 
-	
+
 	if (choice == 'a' || choice == 'A'){
 		char foodName[50], foodPrice[10];
 		cout << "请输入新菜品名称：";
@@ -144,10 +154,10 @@ void managementMenuHandle(){
 		cout << "请输入菜品的新价格:";
 		cin >> foodPrice;
 
-		mAction.updateFood(id,foodName,foodPrice);
+		mAction.updateFood(id, foodName, foodPrice);
 		system("cls");
 		//展示菜单表
-		cout << "修改后完整菜单列表:" << endl; 
+		cout << "修改后完整菜单列表:" << endl;
 		mAction.showMenu();
 		start();
 	}
@@ -157,7 +167,7 @@ void managementMenuHandle(){
 void managementEmployeeHandle(){
 	char choice;
 
-	cout << "*****************************员工管理****************************" << endl<<endl;
+	cout << "*****************************员工管理****************************" << endl << endl;
 
 	//展示员工表
 	eAction.showAllEmployee();
@@ -215,7 +225,7 @@ void start(){
 	char choice;
 
 	cout << endl;
-	cout << "----------------------------- 分割线 ----------------------------"<<endl;
+	cout << "----------------------------- 分割线 ----------------------------" << endl;
 	cout << endl;
 	cout << "*****************************************************************" << endl;
 	cout << "*****************************************************************" << endl;
@@ -223,9 +233,9 @@ void start(){
 	cout << "*************************光华餐厅管理系统************************" << endl;
 	cout << "*****************************************************************" << endl;
 	cout << "*****************************************************************" << endl;
-	cout << "*****************************************************************" << endl<<endl<<endl<<endl;
+	cout << "*****************************************************************" << endl << endl << endl << endl;
 
-	cout << "请选择操作类型： 查阅（S) 管理（M）按Q键随时退出" << endl;
+	cout << "请选择操作类型： 查阅（S) 管理（M）按Esc键随时退出" << endl;
 	cin >> choice;
 
 	if (choice == 's' || choice == 'S'){
@@ -234,4 +244,37 @@ void start(){
 	else if (choice == 'm' || choice == 'M'){
 		managementHandle();
 	}
+}
+
+void threadHandle(){
+	HANDLE h[2];
+
+
+	h[0] = (HANDLE)::_beginthreadex(NULL, 0, ThreadProc, NULL, 0, &uId1);
+	h[1] = (HANDLE)::_beginthreadex(NULL, 0, ThreadProc2, NULL, 0, &uId2);
+
+
+	::WaitForMultipleObjects(2, h, TRUE, INFINITE);
+	::CloseHandle(h[0]);
+	::CloseHandle(h[1]);
+
+}
+
+UINT __stdcall ThreadProc(LPVOID)
+{
+	while (1){
+		if (GetKeyState(VK_ESCAPE) & 0x8000)
+		{
+			break;
+		}
+	}
+	exit(0);
+	return 0;
+
+}
+
+UINT __stdcall ThreadProc2(LPVOID){
+
+	mainHandling();
+	return 0;
 }
