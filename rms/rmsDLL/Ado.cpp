@@ -143,7 +143,8 @@ int ADO::Add(char *table, char** pContent, int Cnum)
 		p++;
 	}
 	try{
-		m_pConnection->Execute((_bstr_t)"INSERT INTO [" + table + "] VALUES (" + Content + ")", NULL, adCmdText);
+		string sql = (_bstr_t) "INSERT INTO " + table + " (foodName, foodPrice) VALUES (" + Content + ")";
+		m_pConnection->Execute((_bstr_t)"INSERT INTO " + table + " (foodName, foodPrice) VALUES (" + Content + ")", NULL, adCmdText);
 	}
 	catch (_com_error e)
 	{
@@ -287,8 +288,8 @@ void ADO::ShowCurrentRS(bool bWithName){
 
 void ADO::ShowColumnNames(char* table)
 {
+	this->GetTableInfo(table);
 	int colsum = m_pRecordset->Fields->Count;
-	GetTableInfo(table);
 	vector<_bstr_t> column_name;
 	try{
 		for (int i = 0; i<colsum; i++){

@@ -1,7 +1,7 @@
-﻿生成启动时间为 2023/1/7 14:00:31。
-     1>项目“D:\BASIC\Desktop\windowsProgrammingHW\rms\rms\rms.vcxproj”在节点 2 上(Rebuild 个目标)。
+﻿生成启动时间为 2023/1/7 16:41:06。
+     1>项目“D:\BASIC\Desktop\windowsProgrammingHW\rms\rms\rms.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt rms.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt rms.cpp
          rms.cpp
      1>d:\basic\desktop\windowsprogramminghw\rms\rms\rms.cpp(6): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
      1>d:\basic\desktop\windowsprogramminghw\rms\rmsdll\ado.h(25): warning C4251: “ADO::m_pConnection”: class“_com_ptr_t<_com_IIID<_Connection,& _GUID_00001550_0000_0010_8000_00aa006d2ea4>>”需要有 dll 接口由 class“ADO”的客户端使用
@@ -18,8 +18,8 @@
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\BASIC\Desktop\windowsProgrammingHW\rms\Debug\rms.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\BASIC\Desktop\windowsProgrammingHW\rms\Debug\rms.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\BASIC\Desktop\windowsProgrammingHW\rms\Debug\rms.lib" /MACHINE:X86 Debug\rms.obj
          rms.vcxproj -> D:\BASIC\Desktop\windowsProgrammingHW\rms\Debug\rms.exe
-     1>已完成生成项目“D:\BASIC\Desktop\windowsProgrammingHW\rms\rms\rms.vcxproj”(Rebuild 个目标)的操作。
+     1>已完成生成项目“D:\BASIC\Desktop\windowsProgrammingHW\rms\rms\rms.vcxproj”(Build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:01.20
+已用时间 00:00:01.09
