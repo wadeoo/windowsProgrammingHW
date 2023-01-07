@@ -7,6 +7,7 @@
 #include "..\rmsDLL\Menu.h"　
 #include "..\rmsDLL\Employee.h"　
 #include "..\rmsDLL\menuAction.h"　
+#include "..\rmsDLL\EmployeeAction.h"　
 
 
 using namespace std;
@@ -21,6 +22,7 @@ void managementEmployeeHandle();
 
 ADO ado(3);//选择 access
 menuAction mAction;
+EmployeeAction eAction;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
@@ -136,5 +138,48 @@ void managementMenuHandle(){
 
 //负责员工管理
 void managementEmployeeHandle(){
+	char choice;
 
+	cout << "*******员工管理*******" << endl;
+
+	//展示员工表
+	eAction.showAllEmployee();
+
+	cout << "请选择具体操作类型： 增加（A）删除（B）修改（C）" << endl;
+	cin >> choice;
+
+
+	if (choice == 'a' || choice == 'A'){
+		char name[50], role[10];
+		cout << "请输入新员工姓名：";
+		cin >> name;
+		cout << "请输入新员工职位：";
+		cin >> role;
+		eAction.addEmployee(name, role);
+		//展示员工表
+		eAction.showAllEmployee();;
+	}
+	else if (choice == 'b' || choice == 'B'){
+		char id[10];
+		cout << "请输入要删除的员工的id:";
+		cin >> id;
+		eAction.deleteEmployee(id);
+		//展示员工表
+		eAction.showAllEmployee();
+	}
+	else if (choice == 'c' || choice == 'C'){
+		char id[10];
+		char name[50], role[20];
+
+		cout << "请输入要修改的员工的id:";
+		cin >> id;
+		cout << "请输入员工的新姓名:";
+		cin >> name;
+		cout << "请输入员工的新职位:";
+		cin >> role;
+
+		eAction.updateEmployee(id, name, role);
+		//展示员工表
+		eAction.showAllEmployee();
+	}
 }

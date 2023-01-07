@@ -30,6 +30,9 @@
     <ClInclude Include="menuAction.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="EmployeeAction.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Ado.cpp">
@@ -45,6 +48,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="menuAction.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="EmployeeAction.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
