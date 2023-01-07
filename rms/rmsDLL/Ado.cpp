@@ -143,7 +143,6 @@ int ADO::Add(char *table, char** pContent, int Cnum)
 		p++;
 	}
 	try{
-		string sql = (_bstr_t) "INSERT INTO " + table + " (foodName, foodPrice) VALUES (" + Content + ")";
 		m_pConnection->Execute((_bstr_t)"INSERT INTO " + table + " (foodName, foodPrice) VALUES (" + Content + ")", NULL, adCmdText);
 	}
 	catch (_com_error e)

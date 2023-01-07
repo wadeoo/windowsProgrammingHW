@@ -83,12 +83,14 @@
     <ClInclude Include="Employee.h" />
     <ClInclude Include="lib.h" />
     <ClInclude Include="Menu.h" />
+    <ClInclude Include="menuAction.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Ado.cpp" />
     <ClCompile Include="Employee.cpp" />
     <ClCompile Include="lib.cpp" />
     <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="menuAction.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="lib.def" />

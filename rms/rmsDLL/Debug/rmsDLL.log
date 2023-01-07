@@ -1,7 +1,15 @@
-﻿生成启动时间为 2023/1/7 15:42:34。
+﻿生成启动时间为 2023/1/7 17:38:14。
      1>项目“D:\BASIC\Desktop\windowsProgrammingHW\rms\rmsDLL\rmsDLL.vcxproj”在节点 2 上(Rebuild 个目标)。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D RMSDLL_EXPORTS /D _WINDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Ado.cpp Employee.cpp lib.cpp Menu.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D RMSDLL_EXPORTS /D _WINDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Ado.cpp Employee.cpp lib.cpp Menu.cpp menuAction.cpp
+         menuAction.cpp
+     1>d:\basic\desktop\windowsprogramminghw\rms\rmsdll\menu.h(18): warning C4251: “Menu::foodName”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“Menu”的客户端使用
+     1>d:\basic\desktop\windowsprogramminghw\rms\rmsdll\ado.h(25): warning C4251: “ADO::m_pConnection”: class“_com_ptr_t<_com_IIID<_Connection,& _GUID_00001550_0000_0010_8000_00aa006d2ea4>>”需要有 dll 接口由 class“ADO”的客户端使用
+     1>d:\basic\desktop\windowsprogramminghw\rms\rmsdll\ado.h(26): warning C4251: “ADO::m_pRecordset”: class“_com_ptr_t<_com_IIID<_Recordset,& _GUID_00001556_0000_0010_8000_00aa006d2ea4>>”需要有 dll 接口由 class“ADO”的客户端使用
+     1>d:\basic\desktop\windowsprogramminghw\rms\rmsdll\ado.h(59): warning C4251: “ADO::m_username”: class“_bstr_t”需要有 dll 接口由 class“ADO”的客户端使用
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\comutil.h(144) : 参见“_bstr_t”的声明
+     1>d:\basic\desktop\windowsprogramminghw\rms\rmsdll\ado.h(60): warning C4251: “ADO::m_password”: class“_bstr_t”需要有 dll 接口由 class“ADO”的客户端使用
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\comutil.h(144) : 参见“_bstr_t”的声明
          Menu.cpp
      1>d:\basic\desktop\windowsprogramminghw\rms\rmsdll\menu.h(18): warning C4251: “Menu::foodName”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“Menu”的客户端使用
          lib.cpp
@@ -21,10 +29,11 @@
          Debug\Employee.obj
          Debug\lib.obj
          Debug\Menu.obj
+         Debug\menuAction.obj
             正在创建库 D:\BASIC\Desktop\windowsProgrammingHW\rms\Debug\rmsDLL.lib 和对象 D:\BASIC\Desktop\windowsProgrammingHW\rms\Debug\rmsDLL.exp
          rmsDLL.vcxproj -> D:\BASIC\Desktop\windowsProgrammingHW\rms\Debug\rmsDLL.dll
      1>已完成生成项目“D:\BASIC\Desktop\windowsProgrammingHW\rms\rmsDLL\rmsDLL.vcxproj”(Rebuild 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:02.05
+已用时间 00:00:02.68

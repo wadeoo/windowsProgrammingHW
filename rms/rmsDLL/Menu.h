@@ -17,7 +17,7 @@ public:
 private:
 	string  foodName;
 	double  foodPrice;
-
+	
 };
 
 #endif

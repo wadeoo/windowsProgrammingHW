@@ -6,6 +6,7 @@
 #include "..\rmsDLL\Ado.h"　
 #include "..\rmsDLL\Menu.h"　
 #include "..\rmsDLL\Employee.h"　
+#include "..\rmsDLL\menuAction.h"　
 
 
 using namespace std;
@@ -19,6 +20,7 @@ void managementEmployeeHandle();
 
 
 ADO ado(3);//选择 access
+menuAction mAction;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
@@ -85,33 +87,43 @@ void managementHandle(){
 
 //负责菜单管理
 void managementMenuHandle(){
-	//
+	
 	char choice;
+
 	cout << "*******菜单管理*******" << endl;
 
 	//展示菜单表
-	ado.GetTableInfo("menu");
-	ado.ShowCurrentRS(true);
+	mAction.showMenu();;
 
 	cout << "请选择具体操作类型： 增加（A）删除（B）修改（C）"<< endl;
 	cin >> choice;
 
-	//
+	
 	if (choice == 'a' || choice == 'A'){
-		char* foodName, foodPrice;
+		char foodName[50], foodPrice[10];
 		cout << "请输入新菜品名称：";
 		cin >> foodName;
 		cout << "请输入新菜品价格：";
 		cin >> foodPrice;
-
-		
-
+		mAction.addFood(foodName, foodPrice);
+		//展示菜单表
+		mAction.showMenu();
 	}
 	else if (choice == 'b' || choice == 'B'){
-		managementEmployeeHandle();
+		char foodName[50];
+		cout << "请输入要删除的菜品的名称";
+		cin >> foodName;
+		mAction.deleteFood(foodName);
+		//展示菜单表
+		mAction.showMenu();
 	}
 	else if (choice == 'c' || choice == 'C'){
-		managementEmployeeHandle();
+		char foodName[50];
+		cout << "请输入要修改的菜品的名称";
+		cin >> foodName;
+		mAction.updateFood(foodName);
+		//展示菜单表
+		mAction.showMenu();
 	}
 }
 

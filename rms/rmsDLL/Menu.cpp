@@ -6,6 +6,7 @@
 
 Menu::Menu()
 {
+	
 }
 
 Menu::Menu(string foodName, double foodPrice){
@@ -17,3 +18,4 @@ Menu::Menu(string foodName, double foodPrice){
 Menu::~Menu()
 {
 }
+
