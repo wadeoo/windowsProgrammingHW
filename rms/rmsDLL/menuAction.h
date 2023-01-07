@@ -16,6 +16,8 @@ public:
 
 	void showMenu();
 
+	void searchFood(char* foodName);
+
 	void addFood(char* foodName, char* foodPrice);
 	void deleteFood(char* id);
 	void updateFood(char* id,char* foodName,char* foodPrice);

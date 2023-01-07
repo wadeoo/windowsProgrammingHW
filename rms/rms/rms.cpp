@@ -68,7 +68,23 @@ void mainHandling(){
 
 //负责查询
 void searchHandle(){
-
+	char choice;
+	cout << "请选择查询对象：菜单（A）员工（B）" << endl;
+	cin >> choice;
+	if (choice == 'a' || choice == 'A'){
+		mAction.showMenu();
+		char foodName[50];
+		cout << "请输入要查询的菜品的名称：";
+		cin >> foodName;
+		mAction.searchFood(foodName);
+	}
+	else if (choice == 'b' || choice == 'B'){
+		eAction.showAllEmployee();
+		char name[50];
+		cout << "请输入要查询的员工的姓名：";
+		cin >> name;
+		eAction.searchEmployee(name);
+	}
 }
 
 //负责管理

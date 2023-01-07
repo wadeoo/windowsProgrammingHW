@@ -16,6 +16,8 @@ public:
 
 	void showAllEmployee();
 
+	void searchEmployee(char* name);
+
 	void addEmployee(char* name, char* role);
 	void deleteEmployee(char* id);
 	void updateEmployee(char* id, char* name, char* role);

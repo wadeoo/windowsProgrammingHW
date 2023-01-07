@@ -21,6 +21,15 @@ void menuAction::showMenu(){
 	ado.ShowCurrentRS(true);
 }
 
+void menuAction::searchFood(char* foodName){
+	char* condition = new char[100];
+	strcpy(condition, "foodName= '");
+	strcat(condition, foodName);
+	strcat(condition, "'");;
+	ado.Query("menu", condition);
+	ado.ShowCurrentRS(true);
+}
+
 
 void menuAction::addFood(char* foodName, char* foodPrice){
 	ado.ExcuteSQL((_bstr_t)"INSERT INTO " + "menu" + " (foodName, foodPrice) VALUES ('" + foodName + "', " + "'" + foodPrice + "'" ")");

@@ -20,6 +20,14 @@ void EmployeeAction::showAllEmployee(){
 	ado.ShowCurrentRS(true);
 }
 
+void  EmployeeAction::searchEmployee(char* name){
+	char* condition = new char[100];
+	strcpy(condition, "name= '");
+	strcat(condition, name);
+	strcat(condition, "'");;
+	ado.Query("employee", condition);
+	ado.ShowCurrentRS(true);
+}
 
 void EmployeeAction::addEmployee(char* name, char* role){
 	ado.ExcuteSQL((_bstr_t)"INSERT INTO " + "employee" + " (name, role) VALUES ('" + name + "', " + "'" + role + "'" ")");
