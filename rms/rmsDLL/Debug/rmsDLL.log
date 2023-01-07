@@ -1,7 +1,7 @@
-﻿生成启动时间为 2023/1/7 17:38:14。
+﻿生成启动时间为 2023/1/7 18:29:42。
      1>项目“D:\BASIC\Desktop\windowsProgrammingHW\rms\rmsDLL\rmsDLL.vcxproj”在节点 2 上(Rebuild 个目标)。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D RMSDLL_EXPORTS /D _WINDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Ado.cpp Employee.cpp lib.cpp Menu.cpp menuAction.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D RMSDLL_EXPORTS /D _CRT_SECURE_NO_WARNINGS /D _WINDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Ado.cpp Employee.cpp lib.cpp Menu.cpp menuAction.cpp
          menuAction.cpp
      1>d:\basic\desktop\windowsprogramminghw\rms\rmsdll\menu.h(18): warning C4251: “Menu::foodName”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“Menu”的客户端使用
      1>d:\basic\desktop\windowsprogramminghw\rms\rmsdll\ado.h(25): warning C4251: “ADO::m_pConnection”: class“_com_ptr_t<_com_IIID<_Connection,& _GUID_00001550_0000_0010_8000_00aa006d2ea4>>”需要有 dll 接口由 class“ADO”的客户端使用
@@ -36,4 +36,4 @@
 
 生成成功。
 
-已用时间 00:00:02.68
+已用时间 00:00:02.72

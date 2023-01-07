@@ -17,8 +17,8 @@ public:
 	void showMenu();
 
 	void addFood(char* foodName, char* foodPrice);
-	void deleteFood(char* foodName);
-	void updateFood(char* foodName);
+	void deleteFood(char* id);
+	void updateFood(char* id,char* foodName,char* foodPrice);
 private:
 	ADO ado;
 

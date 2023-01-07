@@ -25,3 +25,25 @@ void menuAction::showMenu(){
 void menuAction::addFood(char* foodName, char* foodPrice){
 	ado.ExcuteSQL((_bstr_t)"INSERT INTO " + "menu" + " (foodName, foodPrice) VALUES ('" + foodName + "', " + "'" + foodPrice + "'" ")");
 }
+
+void menuAction::deleteFood(char* id){
+	char* condition = new char[100];
+	strcpy(condition, "id= ");
+	strcat(condition, id);
+	ado.Delete("menu", condition);
+}
+
+void menuAction::updateFood(char* id,char* foodName,char* foodPrice){
+	char* content = new char[100];
+	strcpy(content, "foodName= '");
+	strcat(content, foodName);
+	strcat(content, "', foodPrice= '");
+	strcat(content, foodPrice);
+	strcat(content, "'");
+
+	char* condition = new char[100];
+	strcpy(condition, "id= ");
+	strcat(condition, id);
+	
+	ado.Update("menu", content,condition);
+}

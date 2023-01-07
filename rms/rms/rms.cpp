@@ -110,18 +110,25 @@ void managementMenuHandle(){
 		mAction.showMenu();
 	}
 	else if (choice == 'b' || choice == 'B'){
-		char foodName[50];
-		cout << "请输入要删除的菜品的名称";
-		cin >> foodName;
-		mAction.deleteFood(foodName);
+		char id[10];
+		cout << "请输入要删除的菜品的id:";
+		cin >> id;
+		mAction.deleteFood(id);
 		//展示菜单表
 		mAction.showMenu();
 	}
 	else if (choice == 'c' || choice == 'C'){
-		char foodName[50];
-		cout << "请输入要修改的菜品的名称";
+		char id[10];
+		char foodName[50], foodPrice[20];
+
+		cout << "请输入要修改的菜品的id:";
+		cin >> id;
+		cout << "请输入菜品的新名称:";
 		cin >> foodName;
-		mAction.updateFood(foodName);
+		cout << "请输入菜品的新价格:";
+		cin >> foodPrice;
+
+		mAction.updateFood(id,foodName,foodPrice);
 		//展示菜单表
 		mAction.showMenu();
 	}
